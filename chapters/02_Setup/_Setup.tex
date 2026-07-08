@@ -1,18 +1,9 @@
-\section{Setup}
-\label{sec:setup}
+\chapter{Setup}
+\label{cha:setup}
 
-Wenn es Probleme gibt \LaTeX zu Kompilieren, kann entweder manuell die build reihenfolge durchgeführt werden:
+Ich empfehle im \LaTeX Workshop ein Recipe in den Einstellungen zu hinterlegen um diese Projekt zu Kompilieren:
 
-\begin{lstlisting}[caption=Manuelle ablauf vom Kompilieren]
-pdflatex main.tex
-biber main
-makeglossaries main
-pdflatex main.tex
-\end{lstlisting}
-
-alternativ auch unter den einstellungen von \LaTeX Workshop ein Recipe eingefügt werden:
-
-\begin{lstlisting}[caption=Manuelle ablauf vom Kompilieren]
+\begin{lstlisting}[caption=Einstellungen für ein Recipe des LaTeX Workshops]
 "latex-workshop.latex.recipes": [
     {
         "name": "pdflatex -> biber -> makeglossaries -> pdflatex",
@@ -40,3 +31,14 @@ alternativ auch unter den einstellungen von \LaTeX Workshop ein Recipe eingefüg
     }
 ]
 \end{lstlisting}
+
+Alternativ auch über die Command Line:
+
+\begin{lstlisting}[caption=Manuelle ablauf vom Kompilieren]
+pdflatex main.tex
+biber main
+makeglossaries main
+pdflatex main.tex
+\end{lstlisting}
+
+Wenn Updates der Quellen und des Glossars nicht mehr notwendig sind, kann das Kompilieren auf nur \lstinline|pdflatex main.tex| gekürzt werden.

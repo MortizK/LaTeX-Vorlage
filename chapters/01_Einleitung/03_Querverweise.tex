@@ -1,0 +1,15 @@
+\section{Wir mache ich Querverweise?}
+\label{sec:querverweise}
+
+Ein Querverweis ist ein Verweis innerhalb eines Dokumentes. z.B.:
+
+\begin{itemize}
+    \item auf eine \autoref{tab:simpleTable}
+    \item auf eine \autoref{fig:dhbw_logo}
+    \item auf ein \autoref{cha:einleitung}
+    \item auf ein \autoref{sec:glossar}
+\end{itemize}
+
+Die Funktioniert entweder mit \lstinline|\ref{fig:dhbw_logo}|, was nur die Nummer zurückgibt oder mit \lstinline|\autoref{fig:dhbw_logo}|, welche über das Präfix \textit{fig} erkennt das es sich um eine Abbildung handelt.
+
+Wichtig: Es kann nur referenziert werden, was mit einem Label (\lstinline|\label{fig:dhbw_logo}|) beschriftet ist. Siehe dazu wie ich das in dieser Arbeit bis jetzt gemacht habe.
