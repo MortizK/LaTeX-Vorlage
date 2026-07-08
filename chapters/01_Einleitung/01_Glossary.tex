@@ -1,0 +1,20 @@
+\section{Wie benutze ich Glossar?}
+\label{sec:glossar}
+
+Das Glossar wird durch \lstinline|\printglossaries| wird das Glossar eingefügt. Glossar-Einträge können unter \lstinline|glossary.tex| eingetragen werden.
+
+\begin{lstlisting}[language=TeX, caption=Beispiel von zwei Glossar Einträgen]
+\newglossaryentry{latex}
+{
+        name=\LaTeX,
+        description={Eine Markup Language, geeignet für Wissenschaftliche Arbeiten}
+}
+
+\newacronym{ctan}{CTAN}{Comprehensive \TeX Archive Network}
+\end{lstlisting}
+
+Nicht alle Glossar Einträge tauchen sofort in dem Glossar oder Akronym Listen auf, denn Sie müssen erst benutzt werden.
+
+Akronyme wie '\gls{ctan}' können mit \lstinline|\gls{ctan}| eingetragen werden. Das gleiche gilt auch für Glossar Einträge wie \gls{latex}
+
+Weitere Informationen unter \href{https://ctan.org/pkg/glossaries}{CTAN Glossaries}

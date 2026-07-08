@@ -1,0 +1,42 @@
+\section{Setup}
+\label{sec:setup}
+
+Wenn es Probleme gibt \LaTeX zu Kompilieren, kann entweder manuell die build reihenfolge durchgeführt werden:
+
+\begin{lstlisting}[caption=Manuelle ablauf vom Kompilieren]
+pdflatex main.tex
+biber main
+makeglossaries main
+pdflatex main.tex
+\end{lstlisting}
+
+alternativ auch unter den einstellungen von \LaTeX Workshop ein Recipe eingefügt werden:
+
+\begin{lstlisting}[caption=Manuelle ablauf vom Kompilieren]
+"latex-workshop.latex.recipes": [
+    {
+        "name": "pdflatex -> biber -> makeglossaries -> pdflatex",
+        "tools": ["pdflatex", "biber", "makeglossaries", "pdflatex"]
+    }
+],
+"latex-workshop.latex.tools": [
+    {
+        "name": "biber",
+        "command": "biber",
+        "args": ["%DOCFILE%"]
+    },{
+        "name": "makeglossaries",
+        "command": "makeglossaries",
+        "args": ["%DOCFILE%"]
+    },{
+        "name": "pdflatex",
+        "command": "pdflatex",
+        "args": [
+            "-synctex=1",
+            "-interaction=nonstopmode",
+            "-file-line-error",
+            "%DOC%"
+        ]
+    }
+]
+\end{lstlisting}

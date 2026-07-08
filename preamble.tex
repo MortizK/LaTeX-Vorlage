@@ -1,0 +1,88 @@
+% Einstellung der Sprache des Paketes Babel und der Verzeichnisüberschriften
+\usepackage[noconfigs,ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{csquotes}   % Empfohlen für biblatex und sprachabhängige Anführungszeichen
+
+%%%%%%% Package Includes %%%%%%%
+
+\usepackage{graphicx}	% Images
+\graphicspath{{images/}}
+
+\usepackage{pdfpages}   % zum Einbinden von PDFs
+\usepackage{float}		% Erweiterung Gleitobjekte, wie Tabellen, Bilder
+\usepackage{xcolor} 
+\usepackage{array}		% Tabellen
+\usepackage{listings}	% Quellcode
+\usepackage{tabularx}   % Tables with automatic column width
+\usepackage{multirow}   % Multirow tables
+
+\usepackage[
+    backend=biber,     % As 'bibtex' had problems
+]{biblatex}	% Literaturverzeichnis
+\addbibresource{literature.bib}	% Literaturdatenbank
+\usepackage[acronym,toc]{glossaries}    % Glossar
+
+\usepackage{hyperref}   % Links
+\hypersetup{
+    pdftitle={\titel},
+    pdfauthor={\autor},
+    pdfkeywords={Keyword1} {Keyword2},
+    pdfnewwindow=true,  % open links in new window TODO: Does not work
+    colorlinks=true,
+    linkcolor=black,    % color of internal links (likes to sections, pages, etc.)
+    filecolor=magenta,  % color of file links
+    urlcolor=cyan,      % color of external links
+    citecolor=black,    % color of citations
+}
+
+%%%%%% Additional settings %%%%%%
+
+% Penalties to avoid overfull hboxes and widows/orphans
+% https://en.wikibooks.org/wiki/TeX/penalty
+\clubpenalty=10000         % Prevent widows
+\widowpenalty=10000        % Prevent orphans
+
+% Bildpfad
+\graphicspath{{images/}}
+
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+
+% Source - https://tex.stackexchange.com/a/536018
+% Posted by Convexity
+% Retrieved 2026-07-08, License - CC BY-SA 4.0
+
+\lstset{literate=% Allow for German characters in lstlistings.
+{Ö}{{\"O}}1
+{Ä}{{\"A}}1
+{Ü}{{\"U}}1
+{ß}{{\ss}}2
+{ü}{{\"u}}1
+{ä}{{\"a}}1
+{ö}{{\"o}}1
+}
+
+
+% Einige häufig verwendete Sprachen
+% https://ftp.fau.de/ctan/macros/latex/contrib/listings/listings.pdf
+\lstloadlanguages{Python, HTML, TeX}
+\lstset{
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{codepurple}\bfseries,
+    commentstyle=\color{gray},
+    stringstyle=\color{teal},
+    numberstyle=\tiny\color{gray},
+    numbers=left,
+    stepnumber=1,
+    numbersep=8pt,
+    showstringspaces=false,
+    frame=single,
+    breaklines=true,
+    tabsize=4,
+    keepspaces=false,
+    columns=flexible,
+    upquote=true,
+    extendedchars=true, % enable extended char handling for UTF-8
+    inputencoding=utf8,
+}
+% TODO: Add Custom JavaScript language definition for listings if needed

@@ -1,0 +1,23 @@
+\section{Wie binde ich Literatur ein?}
+\label{sec:literatur}
+
+Literatur wird über eine \textit{literature.bib} Datei eingebunden. Aus dieser Datei können dann Quelle zitiert werden.
+
+Diese Vorlage zitiert standardmäßig im \gls{ieee} style.
+
+\begin{lstlisting}[caption=Beispiel Eintrag in literature.bib]
+@article{einstein1908relativity,
+  author = {Albert Einstein},
+  journal = {Jahrbuch der Radioaktivität und Elektronik},
+  title = {Über das Relativitätsprinzip und die aus demselben gezogenen Folgerungen},
+  volume = {4},
+  year = {1908},
+  pages = {411--462},
+}
+\end{lstlisting}
+
+Daraus kann dann mit \lstinline|\cite{einstein1908relativity}| zitiert werden:
+
+"Es zeigte sich aber überraschenderweise, daß es nur nötig war, den Begriff der Zeit genügend scharf zu fassen, \dots" \cite{einstein1908relativity}
+
+Ich Persönlich kann noch \href{https://www.zotero.org/}{Zotero} empfehlen um die Literatur Recherche zu machen, da dies auch einen export zu \textit{.bib} Dateien hat.

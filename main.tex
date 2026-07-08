@@ -1,0 +1,75 @@
+\documentclass[
+	abstract=true,		% Möglichkeit ein Abstract zu erstellen
+	oneside,			% Einseitiger Druck.
+	12pt,				% Schriftgrösse
+    parskip=half,		% Absatzabstand statt Einrückung
+	DIV=calc,		    % Satzspiegel berechnen
+	BCOR=8mm,			% Bindekorrektur links: 8mm
+	headinclude=false,	% Kopfzeile nicht in den Satzspiegel einbeziehen
+	footinclude=false,	% Fußzeile nicht in den Satzspiegel einbeziehen
+	listof=totoc,		% Abbildungs-/ Tabellenverzeichnis im Inhaltsverzeichnis darstellen
+	toc=bibliography,	% Literaturverzeichnis im Inhaltsverzeichnis darstellen
+]{scrreprt}	% Koma-Script report-Klasse, für längere Bachelorarbeiten alternativ auch: scrbook
+
+\input{settings.tex}
+\input{preamble.tex}
+
+% Glossary
+\makeglossaries
+\input{other/glossary.tex}
+
+%%%%%% Document %%%%%%
+\begin{document}
+    % Titlepage
+    \input{other/titlepage.tex}
+    \newpage
+
+    % Other pages
+	\pagenumbering{Roman}
+    \input{other/restrictionNotice.tex}
+    \newpage
+    \input{other/declaration.tex}
+    \newpage
+    \input{other/abstract.tex}
+    \newpage
+
+    \pagestyle{plain}   % only page numbers in the footer
+
+    % Table of Contents
+    \setcounter{tocdepth}{2}
+    \tableofcontents
+    \newpage
+
+    % Glossaries and Acronyms
+    % \printglossary[type=\acronymtype]
+    \printglossaries
+    \newpage
+
+    % Other Tables
+    \listoffigures      % Images
+    \newpage
+
+    \listoftables       % Table
+    \newpage
+
+    \lstlistoflistings  % Code
+    \newpage
+
+    \pagenumbering{arabic}
+    \pagestyle{headings}    % Header with chapter and section names
+
+    % Main content
+    \input{chapters/allChapters.tex}
+
+    % Bibliography
+	\pagenumbering{Alph}
+    \printbibliography[heading=bibintoc,title={Literatur}]
+
+    % AI Usage Disclaimer
+    \input{other/aiDisclaimer.tex}
+
+    % Appendix
+    \appendix
+    \input{other/appendix.tex}
+
+\end{document}

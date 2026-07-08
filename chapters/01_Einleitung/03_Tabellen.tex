@@ -1,0 +1,49 @@
+\section{Tabellen}
+\label{sec:tabellen}
+
+Hier gibt es ein paar Tabellen. Um diese in VSCode schnell schreiben zu können bietet der \LaTeX-Workshop einige autocomplete features wie BTA:
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|c|cc|}
+        \hline
+         & A & B \\
+        \hline
+        C & 1 & 0 \\
+        D & 0 & 0 \\
+        \hline
+    \end{tabular}
+    \caption{Eine Einfache Übergangstabelle}
+    \label{tab:simpleTable}
+\end{table}
+
+Bei größeren Tabellen eignet sich auch \textit{tabularx}, da dies Automatische Zeilenumbrüche ermöglicht.
+
+\begin{table}[ht]
+    \centering
+    \begin{tabularx}{0.9\textwidth}{|X|X|}
+        \hline
+        \LaTeX & \LaTeX ist ein plattformunabhängiges und freies Softwarepaket, das die Benutzung des Textsatzsystems TeX mit Hilfe von Makros vereinfacht.\\
+        \hline
+        Lorem Ipsum & Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. \\
+        \hline
+    \end{tabularx}
+    \caption{Eine Tabelle die tabularx verwendet}
+    \label{tab:tabularx}
+\end{table}
+
+Mit \textit{multirow} können auch explezit Zellen einer Tabelle verbunden werden:
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        \multirow{2}{*}{1} & 2 & 3 \\
+         & 4 & 5 \\\hline
+        6 & 7 & 8 \\\hline
+    \end{tabular}
+    \caption{Tabelle mit multirow}
+    \label{tab:multirow}
+\end{table}
+
+Du kannst mehr unter \href{https://ctan.org/pkg/multirow}{CTAN multirow} und \href{https://ctan.org/pkg/tabularx}{CTAN tabularx} nachlesen.
