@@ -1,6 +1,6 @@
 # Wissenschaftliche Arbeiten in LaTeX
 
-Dies ist ein LaTeX-Template für wissenschaftliche Arbeiten an der DHBW. Es ist bewusst schlank gehalten und ist inspiriert von [DHBW Horb Vorlage](https://github.com/dhbw-horb/latexvorlage).
+Dies ist ein LaTeX-Template für wissenschaftliche Arbeiten an der DHBW. Es ist bewusst schlank gehalten und von der [DHBW-Horb-Vorlage](https://github.com/dhbw-horb/latexvorlage) inspiriert.
 
 ## Projektstruktur
 

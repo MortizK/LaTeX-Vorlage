@@ -1,7 +1,7 @@
 \chapter{Setup}
 \label{cha:setup}
 
-Ich empfehle im \LaTeX Workshop ein Recipe in den Einstellungen zu hinterlegen um diese Projekt zu Kompilieren:
+Ich empfehle, im \LaTeX Workshop ein Recipe in den Einstellungen zu hinterlegen, um dieses Projekt zu kompilieren:
 
 \begin{lstlisting}[caption=Einstellungen für ein Recipe des LaTeX Workshops]
 "latex-workshop.latex.recipes": [
@@ -34,11 +34,11 @@ Ich empfehle im \LaTeX Workshop ein Recipe in den Einstellungen zu hinterlegen u
 
 Alternativ auch über die Command Line:
 
-\begin{lstlisting}[caption=Manuelle ablauf vom Kompilieren]
+\begin{lstlisting}[caption=Manueller Ablauf des Kompilierens]
 pdflatex main.tex
 biber main
 makeglossaries main
 pdflatex main.tex
 \end{lstlisting}
 
-Wenn Updates der Quellen und des Glossars nicht mehr notwendig sind, kann das Kompilieren auf nur \lstinline|pdflatex main.tex| gekürzt werden.
+Wenn Updates der Quellen und des Glossars nicht mehr notwendig sind, kann der Kompilierprozess auf nur \lstinline|pdflatex main.tex| gekürzt werden.

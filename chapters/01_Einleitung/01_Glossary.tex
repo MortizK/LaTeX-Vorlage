@@ -1,20 +1,20 @@
-\section{Wie benutze ich Glossar?}
+\section{Wie benutze ich das Glossar?}
 \label{sec:glossar}
 
-Das Glossar wird durch \lstinline|\printglossaries| wird das Glossar eingefügt. Glossar-Einträge können unter \lstinline|glossary.tex| eingetragen werden.
+Mit \lstinline|\printglossaries| wird das Glossar eingefügt. Glossar-Einträge können in \textit{glossary.tex} gepflegt werden.
 
-\begin{lstlisting}[language=TeX, caption=Beispiel von zwei Glossar Einträgen]
+\begin{lstlisting}[language=TeX, caption=Beispiel für zwei Glossareinträge]
 \newglossaryentry{latex}
 {
         name=\LaTeX,
-        description={Eine Markup Language, geeignet für Wissenschaftliche Arbeiten}
+        description={Eine Markup-Sprache, geeignet für wissenschaftliche Arbeiten}
 }
 
 \newacronym{ctan}{CTAN}{Comprehensive \TeX Archive Network}
 \end{lstlisting}
 
-Nicht alle Glossar Einträge tauchen sofort in dem Glossar oder Akronym Listen auf, denn Sie müssen erst benutzt werden.
+Nicht alle Glossareinträge erscheinen sofort in den Glossar- oder Abkürzungslisten, denn sie müssen erst verwendet werden.
 
-Akronyme wie '\gls{ctan}' können mit \lstinline|\gls{ctan}| eingetragen werden. Das gleiche gilt auch für Glossar Einträge wie \gls{latex}
+Akronyme wie \gls{ctan} können mit \lstinline|\gls{ctan}| ausgegeben werden. Das Gleiche gilt auch für Glossareinträge wie \gls{latex}.
 
-Weitere Informationen unter \href{https://ctan.org/pkg/glossaries}{CTAN Glossaries}
+Weitere Informationen unter \href{https://ctan.org/pkg/glossaries}{CTAN Glossaries}.
