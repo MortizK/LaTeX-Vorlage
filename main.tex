@@ -62,7 +62,8 @@
     \input{chapters/allChapters.tex}
 
     % Bibliography
-	\pagenumbering{Alph}
+	\pagenumbering{Roman}
+    \setcounter{page}{11}   % TODO: change number to the next Roman number used
     \printbibliography[heading=bibintoc,title={Literatur}]
 
     % AI Usage Disclaimer
@@ -70,6 +71,6 @@
 
     % Appendix
     \appendix
-    \input{other/appendix.tex}
+    \input{chapters/99_Appendix/_Appendix.tex}
 
 \end{document}
